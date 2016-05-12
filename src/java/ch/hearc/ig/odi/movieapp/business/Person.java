@@ -58,4 +58,7 @@ public class Person {
         this.movies = movies;
     }   
 
+    public void addMovie(Movie movie){
+        this.movies.add(movie);
+    }
 }
