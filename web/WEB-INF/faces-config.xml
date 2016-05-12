@@ -15,6 +15,9 @@
             <var>msg</var>
         </resource-bundle>
     </application>
-    
-    
+    <managed-bean>
+        <managed-bean-name>personBean</managed-bean-name>
+        <managed-bean-class>ch.hearc.ig.odi.movieapp.presentation.PersonBean</managed-bean-class>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
 </faces-config>
