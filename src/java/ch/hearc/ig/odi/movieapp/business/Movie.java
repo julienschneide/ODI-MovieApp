@@ -5,6 +5,9 @@
  */
 package ch.hearc.ig.odi.movieapp.business;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Julien Schneider <julien.schneider@he-arc.ch>
@@ -14,11 +17,21 @@ public class Movie {
     private Long id;
     private String name;
     private String producer;
+    private List<Person> persons;
 
     public Movie(Long id, String name, String producer) {
         this.id = id;
         this.name = name;
         this.producer = producer;
+        this.persons = new ArrayList();
+    }
+
+    public List<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
     }
 
     public Long getId() {
