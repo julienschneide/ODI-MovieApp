@@ -47,7 +47,7 @@ public class Services implements Serializable{
         movies.put(8l, new Movie(8l, "Pulp Fiction", "Quentin Tarantino"));
         movies.put(9l, new Movie(9l, "Le seigneur des anneaux, le retour du roi", "Peter Jackson"));
         
-        try {
+        //try {
             people.get(1l).addMovie(movies.get(1l));
             people.get(1l).addMovie(movies.get(3l));
             people.get(1l).addMovie(movies.get(5l));
@@ -72,9 +72,9 @@ public class Services implements Serializable{
             people.get(6l).addMovie(movies.get(9l));
             people.get(6l).addMovie(movies.get(1l));
             people.get(6l).addMovie(movies.get(2l));
-        } catch (UniqueException ex) {
+        /*} catch (UniqueException ex) {
             // Ne devrait pas arriver
-        }
+        }*/
     }
     
     /**
