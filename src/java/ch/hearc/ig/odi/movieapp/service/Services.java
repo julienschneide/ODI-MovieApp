@@ -76,7 +76,7 @@ public class Services implements Serializable{
             // Ne devrait pas arriver
         }*/
     }
-    
+        
     /**
      * Retourne une List contenant toutes les personnes du système.
      * Utile pour l'affichage des personnes dans les facelets
@@ -84,6 +84,14 @@ public class Services implements Serializable{
      */
     public List<Person> getPeopleList(){
         return new ArrayList(people.values());
+    }
+    
+    /**
+     * Retourne une Map contenant tous les clients de la banque
+     * @return Une Map contenant tous les clients de la banque
+     */
+    public Map<Long, Person> getPeople(){
+        return people;
     }
     
     /**
