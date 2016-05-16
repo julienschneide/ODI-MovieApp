@@ -11,18 +11,23 @@
         <f:viewAction action="#{personBean.initList()}"></f:viewAction>
     </f:metadata>
     <h:body>
+        <h1>Liste des personnes</h1>
         <h:dataTable value="#{personBean.people}" var="person">
             <h:column>
                 <f:facet name="header">ID</f:facet>
                     #{person.key}
             </h:column>            
             <h:column>
-                <f:facet name="header">First name</f:facet>
+                <f:facet name="header">Prénom</f:facet>
                     #{person.value.firstName}
             </h:column>
             <h:column>
-                <f:facet name="header">Last name</f:facet>
+                <f:facet name="header">Nom</f:facet>
                     #{person.value.lastName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Nombre de films</f:facet>
+                    #{person.value.movies.size()}
             </h:column>
         </h:dataTable>
     </h:body>
