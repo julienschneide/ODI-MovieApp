@@ -8,26 +8,22 @@
         <title>Index Movie-App</title>
     </h:head>
     <f:metadata>
-        <f:viewAction action="#{customerBean.initList()}"></f:viewAction>
+        <f:viewAction action="#{personBean.initList()}"></f:viewAction>
     </f:metadata>
     <h:body>
-        <h:dataTable value="#{customerBean.customers}" var="customer">
+        <h:dataTable value="#{personBean.people}" var="person">
             <h:column>
                 <f:facet name="header">ID</f:facet>
-                <h:link outcome="edit.xhtml" value="#{customer.key}">
-                    <f:param name="id" value="#{customer.key}"/>
-                </h:link>
+                    #{person.key}
             </h:column>            
             <h:column>
                 <f:facet name="header">First name</f:facet>
-                    #{customer.value.firstName}
+                    #{person.value.firstName}
             </h:column>
             <h:column>
                 <f:facet name="header">Last name</f:facet>
-                    #{customer.value.lastName}
+                    #{person.value.lastName}
             </h:column>
-
-
         </h:dataTable>
     </h:body>
 </html>
