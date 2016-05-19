@@ -51,8 +51,8 @@ public class PersonBean implements Serializable {
     public void initList() {
         this.people = service.getPeople();
     }
-    
-        /**
+     
+    /**
      * Retrieves the customer object corresponding to the request's parameter id
      *
      */
