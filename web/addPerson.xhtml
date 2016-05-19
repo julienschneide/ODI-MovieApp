@@ -7,35 +7,23 @@
     <title>Add new person</title>
 
     <f:metadata>
-        <f:viewAction action="#{personBean.initCustomer}"></f:viewAction>
+        <f:viewAction action="#{personBean.initEmptyPerson}"></f:viewAction>
     </f:metadata>
     <h:body>
         <h1>Nouvelle personne</h1>
         <h:form>
-            <fieldset>
-                <legend>Inscription</legend>
-                <h:outputLabel for="id">Adresse email <span class="requis">*</span></h:outputLabel>
-                <h:inputText id="email" value="#{inscrireBean.utilisateur.email}" required="true" size="20" maxlength="60" />
-                <h:message id="emailMessage" for="email" errorClass="erreur" />
-                <br />
-                <h:outputLabel for="motdepasse">Mot de passe <span class="requis">*</span></h:outputLabel>
-                <h:inputSecret id="motdepasse" value="#{inscrireBean.utilisateur.motDePasse}" required="true" size="20" maxlength="20" />
-                <h:message id="motDePasseMessage" for="motdepasse" errorClass="erreur" />
-                <br />
-                <h:outputLabel for="confirmation">Confirmation du mot de passe <span class="requis">*</span></h:outputLabel>
-                <h:inputSecret id="confirmation" value="#{inscrireBean.utilisateur.motDePasse}" required="true" size="20" maxlength="20" />
-                <h:message id="confirmationMessage" for="confirmation" errorClass="erreur" />
-                <br />
-                <h:outputLabel for="nom">Nom d'utilisateur <span class="requis">*</span></h:outputLabel>
-                <h:inputText id="nom" value="#{inscrireBean.utilisateur.nom}" required="true" size="20" maxlength="20" />
-                <h:message id="nomMessage" for="nom" errorClass="erreur" />
-                <br />
-                <h:messages globalOnly="true" infoClass="info" />
-                <h:commandButton value="Inscription" action="#{inscrireBean.inscrire}" styleClass="sansLabel" />
-                <br />
-            </fieldset>
+            <h:panelGrid columns="2">                
+                <h:outputLabel value="Id" for="id"/>
+                <h:inputText id="id" value="#{personBean.currentPerson.id}" required="true"/>
+                <h:outputLabel value="Prenom" for="firstName"/>
+                <h:inputText id="firstName" value="#{personBean.currentPerson.firstName}" required="true"/>
+                <h:outputLabel value="Nom" for="lastName"/>
+                <h:inputText id="lastName" value="#{personBean.currentPerson.lastName}" required="true"/>
+                <h:commandButton action="personBean.save(personBean.currentPerson)" value="Ajouter">
+                </h:commandButton>
+            </h:panelGrid>
         </h:form>   
-        <h:link outcome="list.xhtml?faces-redirect=true" value="home"/>
+        <h:link outcome="index.xhtml" value="Retour à la page d'accueil"/>
     </h:body>
 </html>
 

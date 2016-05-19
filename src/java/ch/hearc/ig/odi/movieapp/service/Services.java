@@ -102,4 +102,9 @@ public class Services implements Serializable{
     public List<Movie> getMoviesList(){
         return new ArrayList(movies.values());
     }
+    
+    public void savePerson(Person person){
+        people.put(person.getId(),person);
+    }
+    
 }
