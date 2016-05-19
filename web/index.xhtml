@@ -19,11 +19,15 @@
             </h:column>            
             <h:column>
                 <f:facet name="header">Prénom</f:facet>
-                    #{person.value.firstName}
+                <h:link outcome="details.xhtml" value="#{person.value.firstName}">
+                    <f:param name="id" value="#{person.key}"/>
+                </h:link>                    
             </h:column>
             <h:column>
                 <f:facet name="header">Nom</f:facet>
-                    #{person.value.lastName}
+                <h:link outcome="details.xhtml" value="#{person.value.lastName}">
+                    <f:param name="id" value="#{person.key}"/>
+                </h:link>                       
             </h:column>
             <h:column>
                 <f:facet name="header">Nombre de films</f:facet>
