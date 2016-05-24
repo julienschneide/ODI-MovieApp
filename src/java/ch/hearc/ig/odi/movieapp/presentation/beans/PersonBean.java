@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.hearc.ig.odi.movieapp.presentation;
+package ch.hearc.ig.odi.movieapp.presentation.beans;
 
 import ch.hearc.ig.odi.movieapp.business.Person;
 import ch.hearc.ig.odi.movieapp.service.Services;
