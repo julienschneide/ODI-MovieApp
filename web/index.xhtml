@@ -11,10 +11,11 @@
         <f:viewAction action="#{personBean.initList()}"></f:viewAction>
     </f:metadata>
     <h:body>
-        <h1>Liste des personnes</h1>
+        
+        <h1>#{msg.personListTitle}</h1>
         <h:dataTable value="#{personBean.people}" var="person">
             <h:column>
-                <f:facet name="header">ID</f:facet>
+                <f:facet name="header">#{msg.personId}</f:facet>
                     #{person.key}
             </h:column>            
             <h:column>
@@ -34,7 +35,27 @@
                     #{person.value.movies.size()}
             </h:column>
         </h:dataTable>
+
         <h:link outcome="addPerson.xhtml" value="Ajouter une nouvelle personne"/>
+
+        
+        
+        <h2>#{msg.movieListTitle}</h2>
+        <h:dataTable value="#{movieBean.movies}" var="movie">
+            <h:column>
+                <f:facet name="header">#{msg.movieId}</f:facet>
+                    #{movie.id}
+            </h:column>            
+            <h:column>
+                <f:facet name="header">#{msg.movieName}</f:facet>
+                    #{movie.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.movieProducer}</f:facet>
+                    #{movie.producer}
+            </h:column>
+        </h:dataTable>
+
     </h:body>
 </html>
 
