@@ -11,13 +11,13 @@
             <supported-locale>en</supported-locale>
         </locale-config>
         <resource-bundle>
-            <base-name>ch.hearc.ig.odi.presentation.bundle.Message</base-name>
+            <base-name>ch.hearc.ig.odi.movieapp.presentation.bundle.Message</base-name>
             <var>msg</var>
         </resource-bundle>
     </application>
     <managed-bean>
         <managed-bean-name>personBean</managed-bean-name>
-        <managed-bean-class>ch.hearc.ig.odi.movieapp.presentation.PersonBean</managed-bean-class>
-        <managed-bean-scope>view</managed-bean-scope>
-    </managed-bean>
+        <managed-bean-class>ch.hearc.ig.odi.movieapp.presentation.beans.PersonBean</managed-bean-class>
+    
+        <managed-bean-scope>view</managed-bean-scope></managed-bean>
 </faces-config>
