@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <title>Add new person</title>
+
+    <f:metadata>
+        <f:viewAction action="#{personBean.initEmptyPerson}"></f:viewAction>
+    </f:metadata>
+    <h:body>
+        <h1>Nouvelle personne</h1>
+        <h:form>
+            <h:panelGrid columns="2">                
+                <h:outputLabel value="Id" for="id"/>
+                <h:inputText id="id" value="#{personBean.currentPerson.id}" required="true"/>
+                <h:outputLabel value="Prenom" for="firstName"/>
+                <h:inputText id="firstName" value="#{personBean.currentPerson.firstName}" required="true"/>
+                <h:outputLabel value="Nom" for="lastName"/>
+                <h:inputText id="lastName" value="#{personBean.currentPerson.lastName}" required="true"/>
+                <h:commandButton action="personBean.save(personBean.currentPerson)" value="Ajouter">
+                </h:commandButton>
+            </h:panelGrid>
+        </h:form>   
+        <h:link outcome="index.xhtml" value="Retour à la page d'accueil"/>
+    </h:body>
+</html>
+
