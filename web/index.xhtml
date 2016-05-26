@@ -56,6 +56,10 @@
                 <f:facet name="header">#{msg.movieProducer}</f:facet>
                     #{movie.producer}
             </h:column>
+            <h:column>
+                <f:facet name="header">#{msg.movieListNBperson}</f:facet>
+                    #{movie.persons.size()}
+            </h:column>
         </h:dataTable>
 
     </h:body>
