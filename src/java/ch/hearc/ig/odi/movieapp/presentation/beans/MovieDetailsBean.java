@@ -24,7 +24,9 @@ import javax.inject.Named;
 public class MovieDetailsBean implements Serializable{
     
     @Inject Services services;
+    
     private Movie movie;
+    private List<Person> persons;
     /**
      * Creates a new instance of MovieDetailsBean
      */
@@ -33,6 +35,7 @@ public class MovieDetailsBean implements Serializable{
     
     public String showMovie(Movie movie){
         this.movie = movie;
+        this.persons = movie.getPersons();
         return "movieDetails";
     }
 
@@ -45,13 +48,7 @@ public class MovieDetailsBean implements Serializable{
     }
     
     public List<Person> getPersons(){
-        /*
-        if(movie == null){
-            return new ArrayList();
-        }*/
-        
-        return new ArrayList(movie.getPersons());
-        
+        return persons;
     }
     
 }

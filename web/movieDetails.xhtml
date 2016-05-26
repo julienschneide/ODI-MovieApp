@@ -17,16 +17,22 @@
             <h:outputText value="#{movieDetailsBean.movie.producer}" />
         </h:panelGrid>
         
-        <h:form id="personsListForm">
-            <h:dataTable id="dtPersons" var="person" value="#{movieDetailsBean.persons}">
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="#{msg.personId}" />
-                    </f:facet>
-                    salut
-                </h:column>
-            </h:dataTable>
-        </h:form>
+        <h:dataTable var="person" value="#{movieDetailsBean.persons}">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="ID" />                   
+                </f:facet>
+                <h:outputText value="#{person.id}" />
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nom" />                   
+                </f:facet>
+                <h:outputText value="#{person.firstName}" />
+            </h:column>
+        </h:dataTable>
+        
+
     </h:body>
 </html>
 

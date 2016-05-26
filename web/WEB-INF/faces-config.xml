@@ -21,13 +21,17 @@
         <managed-bean-class>ch.hearc.ig.odi.movieapp.presentation.beans.PersonBean</managed-bean-class>
         <managed-bean-scope>view</managed-bean-scope>
     </managed-bean>
-    <!--
+    
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>movieDetails</from-outcome>
             <to-view-id>/movieDetails.xhtml</to-view-id>
         </navigation-case>
-    </navigation-rule>  -->
+        <navigation-case>
+            <from-outcome>addMovie</from-outcome>
+            <to-view-id>/addMovie.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
         
 </faces-config>
