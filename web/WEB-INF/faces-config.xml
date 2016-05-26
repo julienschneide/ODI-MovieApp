@@ -15,9 +15,18 @@
             <var>msg</var>
         </resource-bundle>
     </application>
+    
+    <navigation-rule>
+        <from-view-id>/addPerson.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{personBean.showAccount(account)}</from-action>          
+            <from-outcome>show</from-outcome>
+            <to-view-id>/accountDetails.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
     <managed-bean>
         <managed-bean-name>personBean</managed-bean-name>
         <managed-bean-class>ch.hearc.ig.odi.movieapp.presentation.beans.PersonBean</managed-bean-class>
-    
-        <managed-bean-scope>view</managed-bean-scope></managed-bean>
+        <managed-bean-scope>view</managed-bean-scope>
+    </managed-bean>
 </faces-config>

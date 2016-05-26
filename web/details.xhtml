@@ -7,15 +7,14 @@
     <title>Person details</title>
 
     <f:metadata>
-        <f:viewParam name="id" value="#{personBean.currentPersonID2}"/>
-        <f:viewAction action="#{personBean.initPerson2()}"></f:viewAction>
+        <f:viewParam name="id" value="#{personBean.currentPersonID}"/>
+        <f:viewAction action="#{personBean.initPerson()}"></f:viewAction>
     </f:metadata>
     <h:body>      
-        
         <h:panelGrid columns="2">
             <h:outputLabel value="ID" for="id"/>
             <h:outputText id="id" value="#{personBean.currentPerson.id}"/>
-            <h:outputLabel value="Prénom" for="firstName"/>
+            <h:outputLabel value="Prenom" for="firstName"/>
             <h:outputText id="firstName" value="#{personBean.currentPerson.firstName}"/>
             <h:outputLabel value="Nom" for="lastName"/>
             <h:outputText value="#{personBean.currentPerson.lastName}"/>

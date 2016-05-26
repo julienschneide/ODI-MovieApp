@@ -10,6 +10,7 @@ import ch.hearc.ig.odi.movieapp.service.Services;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Map;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -51,7 +52,11 @@ public class PersonBean implements Serializable {
     public void initList() {
         this.people = service.getPeople();
     }
-     
+    
+    public void initEmptyPerson(){
+        this.currentPerson = new Person();
+    }
+    
     /**
      * Retrieves the customer object corresponding to the request's parameter id
      *
@@ -65,6 +70,11 @@ public class PersonBean implements Serializable {
             currentPersonID = Integer.parseInt(idParam);
             currentPerson = service.getPeople().get(currentPersonID);
         }
+    }
+    
+    public String save(Person person) {
+        service.savePerson(person);
+        return "index.xhtml?faces-redirect=true";
     }
     
     public ArrayList<Map.Entry<Long, Person>> getPeople() {
