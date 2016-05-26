@@ -7,6 +7,15 @@
     </h:head>
     <h:body>
         Hello from Facelets
+        
+        <h:panelGrid columns="2">
+            <h:outputLabel><h:outputText value="#{msg.movieId} :" /></h:outputLabel>
+            <h:outputText value="#{movieDetailsBean.movie.id}" />
+            <h:outputLabel><h:outputText value="#{msg.movieName} :" /></h:outputLabel>
+            <h:outputText value="#{movieDetailsBean.movie.name}" />
+            <h:outputLabel><h:outputText value="#{msg.movieProducer} :" /></h:outputLabel>
+            <h:outputText value="#{movieDetailsBean.movie.producer}" />
+        </h:panelGrid>
     </h:body>
 </html>
 

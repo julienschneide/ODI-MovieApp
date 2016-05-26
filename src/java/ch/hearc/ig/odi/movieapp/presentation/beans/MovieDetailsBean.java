@@ -32,5 +32,13 @@ public class MovieDetailsBean implements Serializable{
         this.movie = movie;
         return "movieDetails";
     }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public void setMovie(Movie movie) {
+        this.movie = movie;
+    }
     
 }
