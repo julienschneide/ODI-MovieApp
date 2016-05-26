@@ -27,17 +27,10 @@ public class MovieDetailsBean implements Serializable{
      */
     public MovieDetailsBean() {
     }
-    /*
+    
     public String showMovie(Movie movie){
-        /*if (movie != null) {
-            this.movie = movie;
-            return "movieDetails";
-        } else {
-            this.movie = null;
-            return "error";
-        }
         this.movie = movie;
         return "movieDetails";
-    }*/
+    }
     
 }
