@@ -33,5 +33,13 @@
             <to-view-id>/addMovie.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/addMovie.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>succes</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
         
 </faces-config>

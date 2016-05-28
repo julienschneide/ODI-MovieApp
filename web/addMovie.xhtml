@@ -6,7 +6,21 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Ajout d'un film
+        <h1>Ajout d'un film</h1>
+        <h:form>
+            
+            <h:outputText value="ID : " />
+            <h:inputText id="id" value="#{createMovieBean.id}" required="true" requiredMessage="ID obligatoire"/><br />
+            <h:outputText value="Nom : " />
+            <h:inputText id="name" value="#{createMovieBean.name}" /><br />
+            <h:outputText value="Producteur : " />
+            <h:inputText id="producer" value="#{createMovieBean.producer}" /><br />
+
+            <h:commandButton id="btAdd" type="submit" value="Ajouter" action="#{createMovieBean.addMovie}"/>
+            <h:commandButton id="reset" type="reset" value="reinit" />
+    
+</h:form>
+        
     </h:body>
 </html>
 

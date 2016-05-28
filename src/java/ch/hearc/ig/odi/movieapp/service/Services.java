@@ -107,4 +107,7 @@ public class Services implements Serializable{
         people.put(person.getId(),person);
     }
     
+    public void addMovie(Long id, String name, String producer){
+        movies.put(id, new Movie(id, name, producer));
+    } 
 }
